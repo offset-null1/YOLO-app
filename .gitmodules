@@ -1,0 +1,6 @@
+[submodule "SRAR-Assignment"]
+	path = SRAR-Assignment
+	url = https://github.com/Mitangshu-SRAR/SRAR-Assignment.git
+[submodule "SRAR"]
+	path = SRAR
+	url = ./SRAR

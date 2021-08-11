@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ url_for('static',filename='assets/img/apple-icon.png')}}">
+  <link rel="icon" type="image/png" href="{{ url_for('static',filename='assets/img/favicon.png')}}">
+  <title>
+    YOLO• 
+  </title>
+  <style>
+    fieldset{
+      text-align:center;
+    }
+
+    form{
+      text-align:center;
+    }
+
+    div{
+      text-align:center;
+    }
+  </style>
+  
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/nucleo-icons.css')}}" />
+  <!-- CSS Files -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/css/blk-design-system.css')}}"/>
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link rel="stylesheet" href="{{ url_for('static',filename='assets/demo/demo.css')}}"  />
+</head>
+<body>
+
+    <form action="{{ url_for('video') }}" method="post" > 
+      <!-- onsubmit="send();"  -->
+  
+      <div class="jumbotron">    
+        <p><span id="errorMsg"></span></p>  
+      
+        <fieldset>
+          <legend>YOLO CCTV Website </legend>
+          <input id="img" name="img" type="hidden" value="">
+        </div>
+        <div class="form-group">
+          <label for="src">Enter the rtsp/http address of IP Camera: </label>
+          <input type="text" name="src" class="form-control" id="src"  placeholder="IP address" value="{{src}}" required>
+  
+        </div>
+        <button type="submit" id='submit' class="btn btn-primary" >Submit</button>
+    </form>
+    
+ 
+</body>
+<script src="{{ url_for('static',filename='assets/js/core/jquery.min.js')}}" type="text/javascript"></script>
+<script src="{{ url_for('static',filename='assets/js/core/popper.min.js')}}" type="text/javascript"></script>
+<script src="{{ url_for('static',filename='assets/js/core/bootstrap.min.js')}}" type="text/javascript"></script>
+<script src="{{ url_for('static',filename='assets/js/plugins/perfect-scrollbar.jquery.min.js')}}"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="{{ url_for('static',filename='assets/js/plugins/bootstrap-switch.js')}}"></script>
+<!--  Plugin for the Sliders, full documentation here: http://refreshless.com/nouislider/ -->
+<script src="{{ url_for('static',filename='assets/js/plugins/nouislider.min.js')}}" type="text/javascript"></script>
+
+<script src="{{ url_for('static', filename='assets/js/blk-design-system.min.js')}}" type="text/javascript"></script>
+
+</html>

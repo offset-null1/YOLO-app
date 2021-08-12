@@ -36,15 +36,6 @@ EMBED_PATH = os.path.join(cwd, "students_embedding")
 app = Flask(__name__)
 app.secret_key=os.urandom(24)
 
-
-
-'''
-    index
-'''
-@app.route("/")
-def base():
-    return render_template("attendance.html")
-
 ''' 
     For video feed
 '''
@@ -62,7 +53,7 @@ def gen(src):
 def video():
     if request.method == 'POST':
         src = request.form.get('src')
-    print(src)
+#     print(src)
     return Response(
         gen(src), mimetype="multipart/x-mixed-replace; boundary=frame" 
     )
@@ -70,11 +61,7 @@ def video():
 
 @app.route("/", methods=['POST', 'GET'])
 def show():
-    
-    # if request.method == 'POST':
-        # src = request.form.get('src')
-        # return render_template("attendance.html",src = src)
-    return render_template("attendance.html")
+    return render_template("base.html")
 
 
             
